@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartLoans: Your Personalized Loan Predictor</title>
+    <style>
+        body {
+        background-color: aqua;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+         }
+         label {
+            color: white;
+         }
+        /* body {
+           background-color: rgb(69, 83, 237);;
+            /* background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; */
+        /* } */ 
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            background-color: rgba(45, 60, 79, 0.9);
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(78, 59, 59, 0.2);
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .predict {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 230px;
+            border-radius: 5px;
+            cursor: pointer;
+            /* height: 100vh; */
+        }
+        .predict:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:white;">SmartLoans: Your Personalized Loan Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="Gender">Select Your Gender:</label>
+        <select name="Gender" id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="Married">Married Status:</label>
+        <select name="Married" id="Married">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="Dependents">Dependent family Members:</label>
+        <input type="text" name="Dependents" id="Dependents">
+
+        <label for="Education">Enter Your Education:</label>
+        <select name="Education" id="Education">
+            <option value="Graduate">Graduate</option>
+            <option value="Not Graduate">Not Graduate</option>
+        </select>
+
+        <label for="Self_Employed">Self_Employed Status:</label>
+        <select name="Self_Employed" id="Self_Employed">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="ApplicantIncome">ApplicantIncome:</label>
+        <input type="text" name="ApplicantIncome" id="Dependents">
+
+        <label for="CoapplicantIncome">CoapplicantIncome:</label>
+        <input type="text" name="CoapplicantIncome" id="CoapplicantIncome">
+
+        <label for="LoanAmount">LoanAmount:</label>
+        <input type="text" name="LoanAmount" id="LoanAmount">
+
+        <label for="Loan_Amount_Term">Loan_Amount_Term:</label>
+        <input type="text" name="Loan_Amount_Term" id="Loan_Amount_Term">
+
+        <label for="Credit_History">Credit_History Status:</label>
+        <select name="Credit_History" id="Credit_History">
+            <option value="1.0">Yes</option>
+            <option value="0.0">No</option>
+        </select>
+
+        <label for="Property_Area">Property_Area:</label>
+        <select name="Property_Area" id="Property_Area">
+            <option value="Rural">Rural</option>
+            <option value="Urban">Urban</option>
+            <option value="Semiurban">Semiurban</option>
+        </select>
+
+        <button type="submit" class="predict">Predict</button>
+    </form>
+</body>
+</html>
